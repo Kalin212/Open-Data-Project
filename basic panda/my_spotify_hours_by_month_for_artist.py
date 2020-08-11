@@ -25,7 +25,7 @@ print(spotify_data.iloc[0])
 spotify_data["endTime"] = pd.to_datetime(spotify_data["endTime"])
 
 #print(spotify_data[spotify_data['trackName'].isin(['The End', 'Location', 'Magnolia'])])
-spotify_data = spotify_data[spotify_data['artistName'] == 'Death Grips']
+spotify_data = spotify_data[spotify_data['artistName'] == 'JPEGMAFIA']
 
 hours_by_month = spotify_data.groupby(spotify_data["endTime"].dt.strftime('%B'))['msPlayed'].sum() / 1000.0 / 3600
 
