@@ -31,6 +31,7 @@ hours_by_month = spotify_data.groupby(spotify_data["endTime"].dt.strftime('%B'))
 
 hours_by_month = hours_by_month[['August', 'September', 'October', 'November', 'December', 'January', 'February', 'March', 'April', 'May', 'June', 'July']]
 print(hours_by_month)
+print('Total hours the past year: ' + str(hours_by_month.sum()))
 
 hours_by_month.plot(kind="bar")
 

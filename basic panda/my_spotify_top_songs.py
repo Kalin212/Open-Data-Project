@@ -30,6 +30,7 @@ print("===== top by times played =======")
 trackNames = spotify_data["trackName"]
 counts = trackNames[trackNames != "Unknown Track"].value_counts()
 print(counts)
+print(counts.head(30))
 counts[counts >= 100].plot(kind="bar")
 print("============")
 

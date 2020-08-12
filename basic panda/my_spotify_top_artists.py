@@ -29,7 +29,7 @@ print()
 print("====== top by times played ======")
 artistNames = spotify_data["artistName"]
 counts = artistNames.value_counts()
-print(counts)
+print(counts.head(25))
 counts[counts >= 400].plot(kind="bar")
 print("============")
 
